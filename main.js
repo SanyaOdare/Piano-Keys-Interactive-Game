@@ -26,7 +26,6 @@ const eventAssignment = function(note) {
 // Write a loop that runs the array elements through the function
 notes.forEach(eventAssignment);
 
-
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
 let nextTwo = document.getElementById('second-next-line');
@@ -42,6 +41,10 @@ nextThree.hidden = true;
 startOver.hidden= true;
 
 // Write anonymous event handler property and function for the first progress button
+nextOne.onlick =  function() {
+  nextTwo.hidden = false;
+  nextOne.hidden = true;
+}
 
 
 // Write anonymous event handler property and function for the second progress button
